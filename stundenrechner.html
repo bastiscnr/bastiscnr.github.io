@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stundenrechner</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+        crossorigin="anonymous">
+	<!--jQuery-->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" 
+        integrity="sha256-Lsk+CDPOzTapLoAzWW0G/WeQeViS3FMzywpzPZV8SXk=" 
+        crossorigin="anonymous"></script>
+        <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+        integrity="sha384-lqBg5kgmEvjzVjPOehXQWgTOZaPDaH/6HfQhoz8W+k5sdwA+hFdhbFGNKTd9RvBx"
+        crossorigin="anonymous">
+	
+        <!-- Externe CSS-Datei -->
+    <link rel="stylesheet" href="style.css">
+	<!-- Externe JS-Datei -->
+	<script src="script.js"></script>
+
+</head>
+
+<body>
+<div id ="header">
+	<h1>Stundenmappe</h1>
+</div>
+<h2 class="h2">Einfache Stundenberechnung</h2>
+<div id="content">
+    <div class ="form-group">
+      <label for="beginnzeit">Beginnzeit</label>
+      <input type="time" class="form-control" id="timeInput" onchange="timeInputChanged(this.value)">
+    </div>
+    <div class ="form-group">
+        <label for="endzeit">Endzeit</label>
+        <input type="time" class="form-control" id="timeInput" onchange="timeInputChanged(this.value)">
+    </div>
+    <div class ="form-group">
+      <label for="pausendauer">Pausendauer</label>
+      <input type="range" class="form-range" min="1" max="80" step="0.1" id="distance-slider" oninput="distanceSliderChanged(this.value)">
+  </div>
+    <br>
+    <button class ="btn btn-primary" id="berechnen">Stunden berechnen</button>
+    <button class ="btn btn-primary" id="speichern">Daten speichern</button>
+    <br>
+    <br>
+    <div id ="berechnung" class="alert alert-primary" style ="display:none"></div>
+</div>
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span><h4 class="text-uppercase fw-bold mb-4">
+          <i class="fas fa-gem me-3"></i>Stundenrechner
+        </h4></span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="https://facebook.com/scnrmedia" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com/scnr.photography" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Weitere Seiten:
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Übersicht</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Projektplanung</a>
+            </p>
+            <p>
+                <a href="https://scnrmedia.wixsite.com/scnr/impressum" class="text-reset">Impressum</a>
+              </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgb(90,60,108, 50%);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="https://scnrmedia.wixsite.com/scnr">SCNR Media</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</body>
+</html>

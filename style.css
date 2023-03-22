@@ -1,0 +1,37 @@
+#header {
+    text-indent: 1%;
+    background-color: #5A3C6C;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.h2 {
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right:1%;
+    padding-left: 30px;
+    background-color: rgb(90,60,108, 50%);
+    color: white;
+    border-radius: 10px;
+}
+
+.btn{
+    background-color: #5A3C6C;
+    accent-color: #5A3C6C;
+}
+#content{
+    margin-left: 1%;
+}
+#footer{
+    color:rgb(90,60,108, 50%);
+}
+.form-group{
+    width: 80%;
+    margin-left: 1%;
+}
+.btn:hover{
+    background-color: rgb(90,60,108, 50%);
+}
+.btn::shadow{
+    background-color: rgb(90,60,108, 50%);
+}
