@@ -13,12 +13,13 @@ $(document).ready(function(){
         
         $("#berechnen").click(function(){
 
-            var groesse = parseFloat($("#groesse").val())/100;
-            var gewicht = parseFloat($("#gewicht").val());
-            var bmi = gewicht/(groesse*groesse);
+            var beginnzeit = parseFloat($("#beginnzeit").val());
+            var endzeit = parseFloat($("#endzeit").val());
+            var stunden = endzeit-beginnzeit;
 
-            $("#bmi").html("Ihr BMI: " + bmi);
-            $("#bmi").fadeIn();
+            alert("Hallo")
+            //$("#berechnen").html("Stunden: " + stunden);
+            //$("#stunden").fadeIn();
         });
 
     });

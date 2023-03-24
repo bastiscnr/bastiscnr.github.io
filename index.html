@@ -33,11 +33,11 @@
 <div id="content">
     <div class ="form-group">
       <label for="beginnzeit">Beginnzeit</label>
-      <input type="time" class="form-control" id="timeInput" onchange="timeInputChanged(this.value)">
+      <input type="time" class="form-control" id="beginnzeit" onchange="timeInputChanged(this.value)">
     </div>
     <div class ="form-group">
         <label for="endzeit">Endzeit</label>
-        <input type="time" class="form-control" id="timeInput" onchange="timeInputChanged(this.value)">
+        <input type="time" class="form-control" id="endzeit" onchange="timeInputChanged(this.value)">
     </div>
     <div class ="form-group">
       <label for="pausendauer">Pausendauer</label>
@@ -48,7 +48,7 @@
     <button class ="btn btn-primary" id="speichern">Daten speichern</button>
     <br>
     <br>
-    <div id ="berechnung" class="alert alert-primary" style ="display:none"></div>
+    <div id ="stunden" class="alert alert-primary" style ="display:none"></div>
 </div>
 
 
