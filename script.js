@@ -17,7 +17,7 @@ $(document).ready(function(){
             var endzeit = parseFloat($("#endzeit").val());
             var stunden = endzeit-beginnzeit;
 
-            alert("Hallo")
+            alert(Hallo);
             //$("#berechnen").html("Stunden: " + stunden);
             //$("#stunden").fadeIn();
         });
