@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Stundenrechner</title>
+<html>
 
-    <!-- Bootstrap CSS -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>The Americalculator</title>
+
+	<!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
         crossorigin="anonymous">
@@ -13,110 +14,90 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" 
         integrity="sha256-Lsk+CDPOzTapLoAzWW0G/WeQeViS3FMzywpzPZV8SXk=" 
         crossorigin="anonymous"></script>
-        <!-- jQuery UI CSS -->
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- jQuery UI CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" 
+		integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+		crossorigin="anonymous"></script>
 	
-        <!-- Externe CSS-Datei -->
+    <!-- Externe CSS-Datei -->
     <link rel="stylesheet" href="style.css">
 	<!-- Externe JS-Datei -->
 	<script src="script.js"></script>
 
 </head>
-
+<section>
 <body>
-<div id ="header">
-	<h1>Stundenmappe</h1>
-</div>
-<h2 class="h2">Einfache Stundenberechnung</h2>
-<div id="content">
-    <div class ="form-group">
-      <label for="beginnzeit">Beginnzeit</label>
-      <input type="time" class="form-control" id="beginnzeit" onchange="timeInputChanged(this.value)">
-    </div>
-    <div class ="form-group">
-        <label for="endzeit">Endzeit</label>
-        <input type="time" class="form-control" id="endzeit" onchange="timeInputChanged(this.value)">
-    </div>
-    <div class ="form-group">
-      <label for="pausendauer">Pausendauer</label>
-      <input type="range" class="form-range" min="1" max="80" step="0.1" id="distance-slider" oninput="distanceSliderChanged(this.value)">
-  </div>
-    <br>
-    <button class ="btn btn-primary" id="berechnen">Stunden berechnen</button>
-    <button class ="btn btn-primary" id="speichern">Daten speichern</button>
-    <br>
-    <br>
-    <div id ="stunden" class="alert alert-primary" style ="display:none"></div>
-</div>
+	<!-- Header -->
+    <header>
+			<img src="Americalculator-Logo.png" id="logo" alt="logo" onclick="location.reload()">
+			<h1>The Americalculator</h1>
+	</header>
 
-
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span><h4 class="text-uppercase fw-bold mb-4">
-          <i class="fas fa-gem me-3"></i>Stundenrechner
-        </h4></span>
-      </div>
-      <!-- Left -->
-  
-      <!-- Right -->
-      <div>
-        <a href="https://facebook.com/scnrmedia" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://instagram.com/scnr.photography" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-  
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Weitere Seiten:
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Übersicht</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Projektplanung</a>
-            </p>
-            <p>
-                <a href="https://scnrmedia.wixsite.com/scnr/impressum" class="text-reset">Impressum</a>
-              </p>
-          </div>
-          <!-- Grid column -->
+	<!-- Hauptinhalt -->
+	<main>
+		<div id = "startMenu">
+            <h6>Auswahl der Umrechnung</h6>
+            	<button class="btn btn-large" id="showTemperature"><img src="thermometer.png" height="50px" width="50px"></button>
+				<button class="btn btn-large" id="showClothing"><img src="clothes-hanger.png" height="50px" width="50px"></button>
+				<button class="btn btn-large" id="showSpeed"><img src="speedometer.png" height="50px" width="50px"></button>
+				<button class="btn btn-large" id="showClothing"><img src="size.png" height="50px" width="50px"></button>
+				<button class="btn btn-large" id="showClothing"><img src="dollar.png" height="50px" width="50px"></button>
         </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgb(90,60,108, 50%);">
-      © 2023 Copyright:
-      <a class="text-reset fw-bold" href="https://scnrmedia.wixsite.com/scnr">SCNR Media</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+		<div id="actionMenus">
+		<div id="temperature" style="display:none">
+			<form>
+				<div class ="form-group">
+					<label for="temperatureCelsius">Temperatur in Grad Celsius:</label>
+					<input class ="form-control" id ="temperatureCelsius" type = "number" placeholder ="Temperatur in C*">
+					<div id="slider"></div>
+				</div>
+			</form>
+			<button class ="btn btn-large" id="calculateTemperature">Temperatur in Fahrenheit berechnen</button>
+		</div>
+		<div id="clothing" style="display:none">
+			<h2>Frauen</h2>
+			<label id="lblSizeFemaleEU">Wählen Sie Ihre EU-Größe</label>
+			<select name="sizeFemaleEU" id="sizeFemaleEU" class="form-select-sm" aria-label=".form-select-sm example">
+			  <option value="xs">XS - 34</option>
+			  <option value="s">S - 36</option>
+			  <option value="m">M - 38</option>
+			  <option value="l">L - 40</option>
+			  <option value="xl">XL - 42</option>
+			  <option value="xxl">XXL - 44</option>
+			  <option value="xxxl">XXXL - 46</option>
+			</select>
+			<br><hr>
+			<h2>Männer</h2>
+			<label id="lblSizeMaleEU">Wählen Sie Ihre EU-Größe</label>
+			<select name="sizeMaleEU" id="sizeMaleEU" class="form-select-sm" aria-label=".form-select-sm example">
+			  <option value="xs">XS - 46</option>
+			  <option value="s">S - 48</option>
+			  <option value="m">M - 50</option>
+			  <option value="l">L - 52</option>
+			  <option value="xl">XL - 54</option>
+			  <option value="xxl">XXL - 56</option>
+			  <option value="xxxl">XXXL - 58</option>
+			</select>
+		</div>
+		<div id="speed" style="display:none">
+			<form>
+				<div class ="form-group">
+					<label for="speedKMH">Geschwindigkeit in KM/H</label>
+					<input class ="form-control" id ="speedKMH" type = "number" placeholder ="Geschwindigkeit in KM/H">
+				</div>
+			</form>
+			<button class ="btn btn-large" id="calculateSpeed">Geschwindigkeit in MP/H berechnen</button>
+		</div>
+	</div>
+	</main>
 
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<p>&copy; 2023 Americalculator</p>
+			<btn class="btn btn-large" id="backToMenu">Zurück zum Auswahlmenü</btn>
+		</div>
+	</footer>
 </body>
+</section>
 </html>

@@ -1,25 +1,40 @@
-$(document).ready(function(){
-        
-    $("#berechnen").click(function(){
-
-            var beginnzeit = parseFloat($("#beginnzeit").val());
-            var endzeit = parseFloat($("#endzeit").val());
-            var stunden = endzeit-beginnzeit;
-            
-            $("#berechnen").html("Stunden: " + stunden);
-            $("#stunden").fadeIn();
+    $(document).ready(function(){
+        $("#showTemperature").click(function(){
+            $("#startMenu").fadeOut();
+            $("#temperature").fadeIn();
         });
+                $("#calculateTemperature").click(function(){
+                    var temperatureCelsius = parseFloat($("#temperatureCelsius").val())
+                    var temperatureFahrenheit = temperatureCelsius* 1.8 + 32;
+                    alert(temperatureFahrenheit)
+                });
 
-        /*
-        $("#slider").slider({
-            min:0,
-            max:300,
-            value:100, //startwert
-            animate:"slow",
-            orientation:"horizontal",
-            slide:function(event,ui){
-                $("#groesse").val(ui.value);
-            }
+        $("#showClothing").click(function(){
+            $("#startMenu").fadeOut();
+            $("#clothing").fadeIn();
         });
-        */
+                $("#calculateTemperature").click(function(){
+                    var temperatureCelsius = parseFloat($("#temperatureCelsius").val())
+                    var temperatureFahrenheit = temperatureCelsius* 1.8 + 32;
+                    alert(temperatureFahrenheit)
+                });
+
+        $("#showSpeed").click(function(){
+            $("#startMenu").fadeOut();
+            $("#speed").fadeIn();
+        });
+                $("#calculateSpeed").click(function(){
+                    var speedKMH = parseFloat($("#speedKMH").val())
+                    var speedMPH = speedKMH * 1.60934;
+                    alert(speedMPH)
+                });
+
+
+
+        $("#backToMenu").click(function(){
+            $("#speed").fadeOut();
+            $("#clothing").fadeOut();
+            $("#temperature").fadeOut();
+            $("#startMenu").fadeIn();
+        });
     });
