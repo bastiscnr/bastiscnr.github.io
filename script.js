@@ -25,10 +25,17 @@
         });
                 $("#calculateSpeed").click(function(){
                     var speedKMH = parseFloat($("#speedKMH").val())
-                    var speedMPH = speedKMH * 1.60934;
+                    var speedMPH = speedKMH / 1.60934;
                     alert(speedMPH)
                 });
-
+        
+        $("#showShoeSize").click(function(){
+            $("#startMenu").fadeOut();
+            $("#shoeSize").fadeIn();
+        });
+                $("#calculateShoeSize").click(function(){
+                    
+                });
 
 
         $("#backToMenu").click(function(){

@@ -3,11 +3,9 @@ body {
     background-image: url('flag.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    margin-left: 20px;
-    margin-top: 10px;
+    height: 720px;
+    width: auto;
     font-family: Century Gothic, sans-serif;
-    
-    margin-right: 50%;
   }
   header{
     background-color: rgb(100, 100, 100);
@@ -51,4 +49,15 @@ label{
   margin-top: 10px;
   margin-bottom: 5px;
   margin-left: 20px;
+}
+section {
+  border-radius: 1em;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) }
+#size{
+  align-items: center;
 }
