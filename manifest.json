@@ -1,12 +1,12 @@
 {
     "name": "The Americalculator",
-    "start_url": ".",
+    "start_url": "/app/index.html",
     "display": "standalone",
     "background_color": "#fff",
     "short_name": "Americalculator",
     "icons":[
         {
-            "src": "/applogo192.png",
+            "src": "/app/applogo192.png",
             "type": "image/png",
             "sizes":"any",
             "purpose": "any"
