@@ -4,19 +4,33 @@
             $("#temperature").fadeIn();
         });
                 $("#calculateTemperature").click(function(){
-                    var temperatureCelsius = parseFloat($("#temperatureCelsius").val())
+                    //Slider
+                    var slider = $("myRange");
+                    var output = $("sliderTemperature")
+
+                    slider.oninput = function(){
+                        output.innerHTML = this.value;
+                    }
+                     
                     var temperatureFahrenheit = temperatureCelsius* 1.8 + 32;
-                    alert(temperatureFahrenheit)
+
+                    // Update the current slider value (each time you drag the slider handle)
+
+                    if(temperatureFahrenheit > 0){
+                        $("#lblErgebnis").val = "Temperatur in Fahrenheit: ", temperatureFahrenheit;
+                    }
+                    else{
+                        alert("Bitte geben Sie einen gültigen Wert ein")
+                    }
+                    
                 });
 
         $("#showClothing").click(function(){
             $("#startMenu").fadeOut();
             $("#clothing").fadeIn();
         });
-                $("#calculateTemperature").click(function(){
-                    var temperatureCelsius = parseFloat($("#temperatureCelsius").val())
-                    var temperatureFahrenheit = temperatureCelsius* 1.8 + 32;
-                    alert(temperatureFahrenheit)
+                $("#calculateSize").click(function(){
+                    
                 });
 
         $("#showSpeed").click(function(){
@@ -25,8 +39,8 @@
         });
                 $("#calculateSpeed").click(function(){
                     var speedKMH = parseFloat($("#speedKMH").val())
-                    var speedMPH = speedKMH / 1.60934;
-                    alert(speedMPH)
+                    var speedMPH = Math.round(speedKMH / 1.60934);
+                    $('#result').text(speedMPH);
                 });
         
         $("#showShoeSize").click(function(){
@@ -42,6 +56,7 @@
             $("#speed").fadeOut();
             $("#clothing").fadeOut();
             $("#temperature").fadeOut();
+            $("#shoeSize").fadeOut();
             $("#startMenu").fadeIn();
         });
     });

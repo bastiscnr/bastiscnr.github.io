@@ -19,11 +19,11 @@ body {
     padding: 20px;
     text-align: center;
   }
-label{
-
-}
 .h1{
     text-align: start;
+}
+.h6{
+  font-weight: 500;
 }
 .form-control{
   
@@ -38,6 +38,8 @@ label{
   background-color: rgb(88, 88, 88);
   height:50%;
   width: auto;
+  text-align: center;
+  padding-bottom: 20px;
 }
 #actionMenus{
   background-color: rgb(88, 88, 88);
@@ -57,7 +59,81 @@ section {
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%) }
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
 #size{
   align-items: center;
+}
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #de0d0d; /* Red background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #de0d0d; /* Red background */
+  cursor: pointer; /* Cursor on hover */
+}
+.sliderContainer {
+  width: 100%; /* Width of the outside container */
+}
+#result{
+  width: 100px;
+  height: 50px;
+  background-color: #de0d0d;
+  align-items: center;
+  text-align: center;
+  
+}
+.form-control{
+  align-content: center;
+  width: 75%;
+  margin-left: 10%;
+  margin-top: 2,5%;
+}
+.btn-large{
+  
+}
+#calculateTemperature{
+  background-color: #de0d0d;
+  color: rgb(1, 1, 102);
+  margin: 20px;
+  
+}
+#backToMenu{
+  border-color: rgb(1, 1, 102);
+  border-width: 1px;
+  background-color: rgb(1, 1, 102);
+  color: white;
+}
+.btn{
+  transition-duration: 0.1s;
+}
+.btn:hover {
+  background-color: rgba(1, 1, 102, 0.295);
+  color: white;
 }

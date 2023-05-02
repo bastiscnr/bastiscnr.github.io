@@ -46,13 +46,14 @@
 		<div id="actionMenus">
 		<div id="temperature" style="display:none">
 			<form>
-				<div class ="form-group">
-					<label for="temperatureCelsius">Temperatur in Grad Celsius:</label>
-					<input class ="form-control" id ="temperatureCelsius" type = "number" placeholder ="Temperatur in C*">
-					<div id="slider"></div>
+				<div class ="slidecontainer">
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+					<div id ="sliderOutput"><a id="sliderTemperature"></a><a>C°</a></div>
 				</div>
 			</form>
 			<button class ="btn btn-large" id="calculateTemperature">Temperatur in Fahrenheit berechnen</button>
+			<br>
+			<label id="result">Hallo</label>
 		</div>
 		<div id="clothing" style="display:none">
 			<h2>Frauen</h2>
@@ -78,15 +79,19 @@
 			  <option value="xxl">XXL - 56</option>
 			  <option value="xxxl">XXXL - 58</option>
 			</select>
+			<br>
+			<label id="result">Hallo</label>
 		</div>
 		<div id="speed" style="display:none">
 			<form>
 				<div class ="form-group">
-					<label for="speedKMH">Geschwindigkeit in KM/H</label>
+					<label for="speedKMH"></label>
 					<input class ="form-control" id ="speedKMH" type = "number" placeholder ="Geschwindigkeit in KM/H">
 				</div>
 			</form>
 			<button class ="btn btn-large" id="calculateSpeed">Geschwindigkeit in MP/H berechnen</button>
+			<br>
+			<label id="result">Hallo</label>
 		</div>
 
 		<div id="shoeSize" style="display:none">
@@ -97,6 +102,8 @@
 				</div>
 			</form>
 			<button class ="btn btn-large" id="calculateShoeSize">Schuhgöße umrechnen</button>
+			<br>
+			<label id="result">Hallo</label>
 		</div>
 	</div>
 	</main>
@@ -104,7 +111,7 @@
 	<!-- Footer -->
 	<footer>
 		<div class="container">
-			<p>&copy; 2023 Americalculator</p>
+			<h6><p>&copy; 2023 Americalculator</p></h6>
 			<btn class="btn btn-large" id="backToMenu">Zurück zum Auswahlmenü</btn>
 		</div>
 	</footer>
