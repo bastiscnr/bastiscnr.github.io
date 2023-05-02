@@ -24,6 +24,9 @@
 	<!-- Externe JS-Datei -->
 	<script src="script.js"></script>
 
+	<!--Manifest-->
+	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+
 </head>
 <section>
 <body>
@@ -53,7 +56,7 @@
 			</form>
 			<button class ="btn btn-large" id="calculateTemperature">Temperatur in Fahrenheit berechnen</button>
 			<br>
-			<label id="result">Hallo</label>
+			<label id="result" style="display:none">Hallo</label>
 		</div>
 		<div id="clothing" style="display:none">
 			<h2>Frauen</h2>
@@ -80,7 +83,7 @@
 			  <option value="xxxl">XXXL - 58</option>
 			</select>
 			<br>
-			<label id="result">Hallo</label>
+			<label id="result" style="display:none">Hallo</label>
 		</div>
 		<div id="speed" style="display:none">
 			<form>
@@ -91,7 +94,7 @@
 			</form>
 			<button class ="btn btn-large" id="calculateSpeed">Geschwindigkeit in MP/H berechnen</button>
 			<br>
-			<label id="result">Hallo</label>
+			<label id="result" style="display:none">Hallo</label>
 		</div>
 
 		<div id="shoeSize" style="display:none">
@@ -103,7 +106,7 @@
 			</form>
 			<button class ="btn btn-large" id="calculateShoeSize">Schuhgöße umrechnen</button>
 			<br>
-			<label id="result">Hallo</label>
+			<label id="result" style="display:none">Hallo</label>
 		</div>
 	</div>
 	</main>
