@@ -101,14 +101,6 @@ section {
 .sliderContainer {
   width: 100%; /* Width of the outside container */
 }
-#result{
-  width: 100px;
-  height: 50px;
-  background-color: #de0d0d;
-  align-items: center;
-  text-align: center;
-  
-}
 .form-control{
   align-content: center;
   width: 75%;

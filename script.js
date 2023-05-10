@@ -27,16 +27,13 @@
         });
                 $("#calculateTemperature").click(function(){
                     //Slider
-                    var slider = $("myRange");
-                    var output = $("sliderTemperature")
-
-                    slider.oninput = function(){
-                        output.innerHTML = this.value;
-                    }
+                    $('#myRange').on('input', function() {
+                        var sliderValue = $(this).val();
+                        $('#sliderTemperature').innerHTML(sliderValue);
+                      });
                      
+                    
                     var temperatureFahrenheit = temperatureCelsius* 1.8 + 32;
-
-                    // Update the current slider value (each time you drag the slider handle)
 
                     if(temperatureFahrenheit > 0){
                         $("#lblErgebnis").val = "Temperatur in Fahrenheit: ", temperatureFahrenheit;
@@ -44,7 +41,6 @@
                     else{
                         alert("Bitte geben Sie einen gültigen Wert ein")
                     }
-                    
                 });
 
         $("#showClothing").click(function(){
@@ -60,9 +56,11 @@
             $("#speed").fadeIn();
         });
                 $("#calculateSpeed").click(function(){
-                    var speedKMH = parseFloat($("#speedKMH").val())
+                    var speedKMH = parseFloat($("#speedKMH").val());
                     var speedMPH = Math.round(speedKMH / 1.60934);
-                    $('#result').text(speedMPH);
+                    //$("#result").fadeIn;
+                    $("#result").innerHTML(speedMPH);
+                    
                 });
         
         $("#showShoeSize").click(function(){
